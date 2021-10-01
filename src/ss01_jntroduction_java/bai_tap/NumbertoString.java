@@ -1,8 +1,8 @@
-package Bai_tap;
+package ss01_jntroduction_java.bai_tap;
 
 import java.util.Scanner;
 
-public class Baitap_NumbertoString {
+public class NumbertoString {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập số bạn muốn chuyển sang chữ:");
