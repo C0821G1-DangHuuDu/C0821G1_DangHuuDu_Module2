@@ -7,10 +7,10 @@ public class NumbertoString {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập số bạn muốn chuyển sang chữ:");
         int number=input.nextInt();
-        int hangTram=number/100;
-        int hangChuc=(number-(hangTram*100))/10;
-        int hangDonVi=(number-(hangTram*100)-(hangChuc*10));
-        switch (hangTram){
+        int hundreds=number/100;
+        int dozens=(number-(hundreds*100))/10;
+        int units=(number-(hundreds*100)-(dozens*10));
+        switch (hundreds){
             case 1:
                 System.out.printf("Một trăm ");
                 break;
@@ -39,9 +39,9 @@ public class NumbertoString {
                 System.out.printf("Chín trăm ");
                 break;
         }
-        switch (hangChuc){
+        switch (dozens){
             case 0:
-                if (hangTram!=0){
+                if (hundreds!=0){
                     System.out.printf("lẻ ");
                 }
                 break;
@@ -73,7 +73,7 @@ public class NumbertoString {
                 System.out.printf("Chín mươi ");
                 break;
         }
-        switch (hangDonVi){
+        switch (units){
                 case 1:
                     System.out.printf("Một");
                     break;

@@ -1,0 +1,29 @@
+1/ Exercise1:
+* Câu hỏi 1:
+Line 9 bị lỗi do kiểu dữ liệu "byte" có giới hạn tối đa đến số 127.
+Nếu muốn giữ lại giá trị 200 mà không bị lỗi thì thay đổi kiểu dữ liệu từ "byte" sang "short"/"int"/"long".
+*Câu hỏi 2:
+Giá trị c có giá trị là 0. Vì khi khai báo kiểu dữ liệu là "int" mà không gán giá trị thì giá trị mặc định của biến là 0.
+
+2/ Exercise2:
+* Câu hỏi 3:
+	double point = 4.5;
+        if (point < 5) {
+            System.out.println("pass.");
+        } else {
+            System.out.println("Fail.");
+        }
+Kết quả: hiện "pass."
+
+3/ Exercise3:
+* Câu hỏi 4:
+Khi khai boá biến a với kiểu dữ liệu không phải là float và double thì khi truyền vào switch sẽ không bị lỗi.
+
+4/ Exercise4:
+* Câu hỏi 5:
+Tại line 7 nếu thay || thành && thì kết quả tại line 11 và 12 thì theo em nghĩ là sẽ không thay đổi.
+Vì cho dù đặt ++ trước hay sau biến a và b thì cả 2 biểu thức đã không đúng nên biểu thức bên trong phần body của if sẽ không thực thi.
+Tuy nhiên sau khi đánh giá biểu thức điều kiện thì sẽ thực hiện a++ vì vậy a=3
+++b sẽ được thực hiện trước khi đánh giá biểu thức bên b=4.
+Nhưng khi chạy chương trình thì em thấy b thay đổi. Anh có thể giải thích giúp em vì sao với được không?
+        
