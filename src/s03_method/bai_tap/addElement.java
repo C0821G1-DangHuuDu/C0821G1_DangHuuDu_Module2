@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class addElement {
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         int[] arrayOfNumber = new int[10];
         arrayOfNumber[0] = 4;
@@ -22,12 +22,16 @@ public class addElement {
         System.out.print("\n");
         System.out.print("Nhập vào số cần thêm: ");
         int num = Integer.parseInt(input.nextLine());
+        System.out.print("\n");
+
         System.out.print("Nhập vào vị trí cần thêm: ");
         int index = Integer.parseInt(input.nextLine());
-        for (int i=arrayOfNumber.length-1;i>=index;i--){
-            arrayOfNumber[i]=arrayOfNumber[i-1];
+        System.out.print("\n");
+
+        for (int i = arrayOfNumber.length - 1; i > index; i--) {
+            arrayOfNumber[i] = arrayOfNumber[i - 1];
         }
-        arrayOfNumber[index]=num;
+        arrayOfNumber[index] = num;
 
         System.out.print("\n");
         System.out.println("Display new Array: ");
