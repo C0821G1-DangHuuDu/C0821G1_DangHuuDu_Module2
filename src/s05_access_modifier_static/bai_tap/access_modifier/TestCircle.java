@@ -1,18 +1,9 @@
 package s05_access_modifier_static.bai_tap.access_modifier;
 
-public class Circle {
-    double radius=1.0;
-    private String colour= "red";
+public class TestCircle extends Circle{
+    private double radius;
 
-    public Circle(){
-
-    }
-
-    public Circle(double radius){
-        this.radius=radius;
-    }
-
-    double getRadius() {
+    double getRadius(){
         return this.radius;
     }
 
