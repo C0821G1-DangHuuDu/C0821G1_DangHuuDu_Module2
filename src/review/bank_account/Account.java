@@ -4,7 +4,7 @@ public class Account {
     private long accountNumber;
     private String name;
     private double amount;
-    private final double interestRate=0.035;
+    private final double INTERESTRATE=0.035;
 
     public Account(){
 
@@ -19,6 +19,7 @@ public class Account {
     public Account(long accountNumber, String name) {
         this.accountNumber = accountNumber;
         this.name = name;
+        this.amount = 50.0;
     }
 
     public long getAccountNumber() {
@@ -46,7 +47,7 @@ public class Account {
     }
 
     public double getInterestRate() {
-        return this.interestRate;
+        return this.INTERESTRATE;
     }
     public void addAmount(double money){
         if (money<0){
@@ -65,6 +66,14 @@ public class Account {
     }
     public void expire(){
         this.setAmount(this.getAmount()+this.getAmount()*this.getInterestRate());
+    }
+
+    public void transfer (double money){
+        if (money > this.getAmount()){
+            System.out.println("Số tiền cần chuyển không được lớn hơn số tiền trong tài khoản");
+        } else {
+            this.setAmount(this.getAmount()-money);
+        }
     }
 
 }

@@ -7,7 +7,7 @@ public class MoveAblePoint extends Point {
     private float ySpeed=0.0f;
 
     public MoveAblePoint(){
-
+        super();
     }
 
     public MoveAblePoint(float x, float y, float xSpeed, float ySpeed) {
@@ -17,6 +17,7 @@ public class MoveAblePoint extends Point {
     }
 
     public MoveAblePoint(float xSpeed, float ySpeed) {
+        super();
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }

@@ -2,7 +2,7 @@ package s03_method.bai_tap;
 
 import java.util.Scanner;
 
-public class deleteElement {
+public class DeleteElement {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 //        int size;

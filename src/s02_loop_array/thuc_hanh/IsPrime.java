@@ -2,7 +2,7 @@ package s02_loop_array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class isPrime {
+public class IsPrime {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number:");

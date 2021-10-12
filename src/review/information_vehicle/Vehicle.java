@@ -8,7 +8,7 @@ public class Vehicle {
     private int price;
     private double tax;
 
-    public Vehicle(){
+    public Vehicle() {
 
 
     }
@@ -18,7 +18,7 @@ public class Vehicle {
         this.model = model;
         this.volume = volume;
         this.price = price;
-        this.tax=this.registrationTax();
+        this.tax = this.registrationTax();
 
     }
 
@@ -58,21 +58,21 @@ public class Vehicle {
         return this.registrationTax();
     }
 
-        public double registrationTax(){
+    public double registrationTax() {
         double tax;
-        if(this.getVolume()<100){
-            tax=price*0.01;
-        }else if (this.getVolume()<200){
-            tax=price*0.03;
-        }else {
-            tax=price*0.05;
+        if (this.getVolume() < 100) {
+            tax = price * 0.01;
+        } else if (this.getVolume() < 200) {
+            tax = price * 0.03;
+        } else {
+            tax = price * 0.05;
         }
         return tax;
     }
 
-    public String toString(){
-        return "Name Vehicle: "+this.getName()+"\n Model: "+this.getModel()+
-                "\n Volume: "+this.getVolume()+"\n Price: "+this.getPrice()+
-                "\n Registration Tax: "+this.getTax();
+    public String toString() {
+        return "Name Vehicle: " + this.getName() + "\n Model: " + this.getModel() +
+                "\n Volume: " + this.getVolume() + "\n Price: " + this.getPrice() +
+                "\n Registration Tax: " + this.getTax();
     }
 }
