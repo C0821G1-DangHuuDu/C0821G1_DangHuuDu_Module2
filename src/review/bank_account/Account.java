@@ -68,12 +68,14 @@ public class Account {
         this.setAmount(this.getAmount()+this.getAmount()*this.getInterestRate());
     }
 
-    public void transfer (double money){
+    public void transfer (Account account2, double money){
         if (money > this.getAmount()){
             System.out.println("Số tiền cần chuyển không được lớn hơn số tiền trong tài khoản");
         } else {
             this.setAmount(this.getAmount()-money);
+            account2.addAmount(money);
         }
     }
+
 
 }
