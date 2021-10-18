@@ -39,6 +39,8 @@ public class MyList<E> {
         for (int i = index; i < this.size; i++) {
             elements[i] = elements[i + 1];
         }
+
+        size--;
     }
 
     public int size() {
@@ -62,5 +64,27 @@ public class MyList<E> {
     }
     public E get(int index){
         return (E) elements[index];
+    }
+    public int indexof(E object){
+        int index = -1;
+        for (int i=0;i<this.size;i++){
+            if (object==elements[i]){
+                index=i;
+            }else{
+                throw new IllegalArgumentException("Not found "+object);
+            }
+        }
+        return index;
+    }
+    public boolean contains (E object){
+        boolean check = false;
+        for (int i=0;i<this.size;i++){
+            if (object==elements[i]){
+                check=true;
+            }else{
+                throw new IllegalArgumentException("Not found "+object);
+            }
+        }
+        return check;
     }
 }

@@ -8,10 +8,13 @@ public class MyListTest {
         listInteger.add(15);
         listInteger.add(2,20);
 
-//        for (int i=0; i <listInteger.size(); i++){
-//            System.out.println("element "+(i+1)+": "+listInteger.get(i);
-//        }
+        for (int i=0; i <listInteger.size(); i++){
+            System.out.println("Element "+(i+1)+": "+listInteger.get(i);
+        }
+
         System.out.println(listInteger.get(2));
+        listInteger.indexof(15);
+
 
     }
 }
