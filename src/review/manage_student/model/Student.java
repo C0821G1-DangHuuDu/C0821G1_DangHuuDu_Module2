@@ -1,6 +1,6 @@
 package review.manage_student.model;
 
-public class Student {
+public class Student implements Comparable{
     private String studentID;
     private String studentName;
     private String studentAddress;
@@ -56,5 +56,20 @@ public class Student {
     public String toString(){
         return "ID: "+this.getStudentID()+" - Name: "+this.getStudentName()+
                 " - Address: "+this.getStudentAddress()+" - Point: "+this.getStudentPoint();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(!(o instanceof Student)){
+            return 0;
+        }
+//        Student student = (Student) o;
+        if(this.getStudentPoint()>((Student) o).getStudentPoint()){
+            return 1;
+        }else if (this.getStudentPoint()<((Student) o).getStudentPoint()){
+            return -1;
+        }else {
+            return 0;
+        }
     }
 }

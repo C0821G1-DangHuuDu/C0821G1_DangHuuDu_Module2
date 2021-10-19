@@ -26,6 +26,7 @@ public class MyList<E> {
         }
         if (elements[index]==null){
             elements[index]=element;
+            this.size++;
         }else {
             for (int i = size; i > index; i--) {
                 elements[i] = elements[i - 1];
@@ -35,12 +36,14 @@ public class MyList<E> {
         }
     }
 
-    public void remove(int index) {
+    public E remove(int index) {
+        E element= (E) elements[index];
         for (int i = index; i < this.size; i++) {
             elements[i] = elements[i + 1];
         }
-
         size--;
+        return element;
+
     }
 
     public int size() {
@@ -65,10 +68,11 @@ public class MyList<E> {
     public E get(int index){
         return (E) elements[index];
     }
+
     public int indexof(E object){
         int index = -1;
         for (int i=0;i<this.size;i++){
-            if (object==elements[i]){
+            if (elements[i].equals(object)){
                 index=i;
             }else{
                 throw new IllegalArgumentException("Not found "+object);

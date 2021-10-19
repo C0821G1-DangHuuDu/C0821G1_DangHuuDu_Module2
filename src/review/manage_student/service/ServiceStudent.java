@@ -5,7 +5,7 @@ public interface ServiceStudent {
     void showAll();
     void editStudent();
     void deleteStudent();
-    void findIDStudent();
+    boolean findIDStudent();
     void showStudent();
 //    void compareAble();
 

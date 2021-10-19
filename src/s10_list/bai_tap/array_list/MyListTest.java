@@ -9,11 +9,19 @@ public class MyListTest {
         listInteger.add(2,20);
 
         for (int i=0; i <listInteger.size(); i++){
-            System.out.println("Element "+(i+1)+": "+listInteger.get(i);
+            System.out.println(listInteger.get(i));
+        }
+        System.out.println("------------");
+        System.out.println(listInteger.size());
+        System.out.println("------------");
+        System.out.println(listInteger.remove(2));
+        System.out.println("------------");
+        for (int i=0; i <listInteger.size(); i++){
+            System.out.println(listInteger.get(i));
         }
 
-        System.out.println(listInteger.get(2));
-        listInteger.indexof(15);
+//        System.out.println(listInteger.get(2));
+//        listInteger.indexof(15);
 
 
     }
