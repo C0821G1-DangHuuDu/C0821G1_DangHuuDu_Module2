@@ -11,14 +11,14 @@ public class MyGenericStack<T> {
     }
 
     public void push(T element) {
-        stack.addFirst(element);
+        stack.add(element);
     }
 
     public T pop() {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return stack.removeFirst();
+        return stack.remove(stack.size()-1);
     }
 
     public int size() {
