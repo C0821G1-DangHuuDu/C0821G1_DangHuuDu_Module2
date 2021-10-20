@@ -22,11 +22,11 @@ public class Student implements Comparable{
         this.studentName = studentName;
     }
 
-    public int getStudentOld() {
+    public int getStudentAge() {
         return studentOld;
     }
 
-    public void setStudentOld(int studentOld) {
+    public void setStudentAge(int studentOld) {
         this.studentOld = studentOld;
     }
 
@@ -50,6 +50,6 @@ public class Student implements Comparable{
     @Override
     public int compareTo(Object o) {
         Student student= (Student) o;
-        return this.getStudentName().compareTo(((Student) o).getStudentName());
+        return this.getStudentName().compareTo(student.getStudentName());
     }
 }
