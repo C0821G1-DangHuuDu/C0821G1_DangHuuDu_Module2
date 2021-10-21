@@ -1,6 +1,6 @@
 package s12_map.bai_tap.model;
 
-public class Product {
+public class Product implements Comparable {
     private int id;
     private String  name;
     private int price;
@@ -45,5 +45,21 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o.equals(null)||!(o instanceof Product)){
+            return 0;
+        }
+        Product product= (Product) o;
+        if(this.getPrice()>product.getPrice()){
+            return 1;
+        }else if (this.getPrice()<product.getPrice()){
+            return -1;
+        }else {
+            return 0;
+        }
+
     }
 }
