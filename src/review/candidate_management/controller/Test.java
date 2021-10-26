@@ -59,7 +59,7 @@ public class Test {
                 do {
                     System.out.print("Enter Candidate Phone (minimum 10 characters): ");
                     candidatePhone = input.nextLine();
-                }while (candidatePhone.length()<0||candidatePhone.length()>10);
+                }while (candidatePhone.length()>=10);
                 System.out.print("Enter Candidate Email: ");
                 String candidateEmail = input.nextLine();
                 byte candidateType;
