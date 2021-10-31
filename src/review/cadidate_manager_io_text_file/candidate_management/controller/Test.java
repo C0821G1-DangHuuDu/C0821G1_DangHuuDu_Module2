@@ -1,10 +1,12 @@
-package review.candidate_management.controller;
+package review.cadidate_manager_io_text_file.candidate_management.controller;
 
-import review.candidate_management.model.Candidate;
-import review.candidate_management.model.ExperienceCandidate;
-import review.candidate_management.model.FresherCandidate;
-import review.candidate_management.service.CandidateManager;
+import review.cadidate_manager_io_text_file.candidate_management.model.Candidate;
+import review.cadidate_manager_io_text_file.candidate_management.model.ExperienceCandidate;
+import review.cadidate_manager_io_text_file.candidate_management.model.FresherCandidate;
+import review.cadidate_manager_io_text_file.candidate_management.service.CandidateManager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Test {
@@ -34,8 +36,30 @@ public class Test {
                         candidate.searchCandidate(key,type);
                         break;
                     case 5:
-                        candidate.showAll();
-                        break;
+                        System.out.println("1.\tShow All");
+                        System.out.println("2.\tShow Experience Candidate List");
+                        System.out.println("3.\tShow Fresher Candidate List");
+                        System.out.println("4.\tShow Intern Candidate List");
+                        System.out.print("Enter your choose want to show: ");
+                        int chooseShow=Integer.parseInt(input.nextLine());
+                        switch (chooseShow){
+                            case 1:
+                                List<Candidate> candidateList=new ArrayList<>();
+                                candidateList=candidate.showAll();
+                                for (Candidate candidates:candidateList){
+                                    System.out.println(candidates);
+                                }
+                                break;
+                            case 2:
+                                candidate.showExperienceCandidate();
+                                break;
+                            case 3:
+                                candidate.showFresherCandidate();
+                                break;
+                            case 4:
+                                candidate.showInternCandidate();
+                                break;
+                        }
                     case 6:
                         continue;
                 }
@@ -59,10 +83,11 @@ public class Test {
                 do {
                     System.out.print("Enter Candidate Phone (minimum 10 characters): ");
                     candidatePhone = input.nextLine();
-                }while (candidatePhone.length()>=10);
+                }while (candidatePhone.length()<10);
                 System.out.print("Enter Candidate Email: ");
                 String candidateEmail = input.nextLine();
-                byte candidateType= (byte) choose;
+                byte candidateType= (byte) (choose-1);
+
                 switch (choose) {
                     case 1:
                         byte yearOfExperience;
