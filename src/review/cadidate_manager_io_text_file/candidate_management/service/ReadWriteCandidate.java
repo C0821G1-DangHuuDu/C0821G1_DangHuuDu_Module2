@@ -15,6 +15,7 @@ public class ReadWriteCandidate implements IReadWriteCadidate {
 
     @Override
     public List readExperienceCandidateList() {
+        candidateList=new ArrayList<>();
         try {
             // B1: Tạo FileReader chứa đường dẫn muốn đọc file.
             FileReader fileReader = new FileReader("D:\\Code Gym\\C0821G1_Dang Huu Du\\Module 2\\src\\review\\cadidate_manager_io_text_file\\candidate_management\\model\\ExperienceCandidateList.csv");
@@ -45,6 +46,7 @@ public class ReadWriteCandidate implements IReadWriteCadidate {
 
     @Override
     public List readFresherCandidateList() {
+        candidateList=new ArrayList<>();
         try {
             FileReader fileReader = new FileReader("D:\\Code Gym\\C0821G1_Dang Huu Du\\Module 2\\src\\review\\cadidate_manager_io_text_file\\candidate_management\\model\\FresherCandidateList.csv");
             BufferedReader bufferedReader=new BufferedReader(fileReader);
@@ -65,6 +67,7 @@ public class ReadWriteCandidate implements IReadWriteCadidate {
 
     @Override
     public List readInternCandidateList() {
+        candidateList=new ArrayList<>();
         try {
             FileReader fileReader = new FileReader("D:\\Code Gym\\C0821G1_Dang Huu Du\\Module 2\\src\\review\\cadidate_manager_io_text_file\\candidate_management\\model\\InternCandidateList.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);

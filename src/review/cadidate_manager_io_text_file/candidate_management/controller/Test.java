@@ -107,7 +107,7 @@ public class Test {
                         do {
                             System.out.print("Enter Rank of Graduated(Excellence, Good, Fair, Poor): ");
                             rankOfGraduation = input.nextLine();
-                        }while (!(rankOfGraduation.equals("Excellence"))||!(rankOfGraduation.equals("Good"))||!(rankOfGraduation.equals("Fair"))||!(rankOfGraduation.equals("Poor")));
+                        }while (!((rankOfGraduation.equals("Excellence"))||(rankOfGraduation.equals("Good"))||(rankOfGraduation.equals("Fair"))||(rankOfGraduation.equals("Poor"))));
                         System.out.print("Enter University Graduated: ");
                         String universityGraduation = input.nextLine();
                         Candidate fresherCandidate = new FresherCandidate(candidateID, candidateFirstName, candidateLastName, candidateYearBirthDate, candidateAddress, candidatePhone, candidateEmail, candidateType, graduatedTime, rankOfGraduation, universityGraduation);

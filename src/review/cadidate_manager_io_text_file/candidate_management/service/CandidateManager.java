@@ -33,7 +33,7 @@ public class CandidateManager implements ICandidateManager {
     }
 
     public List showAll() {
-        candidateList=new ArrayList<>();
+
         List<Candidate> experienceCandidateList = readWriteCandidate.readExperienceCandidateList();
         List<Candidate> fresherCandidateList = readWriteCandidate.readFresherCandidateList();
         List<Candidate> internCandidateList = readWriteCandidate.readInternCandidateList();
@@ -52,7 +52,7 @@ public class CandidateManager implements ICandidateManager {
 
     @Override
     public void showExperienceCandidate() {
-        List<Candidate> experienceCandidateList=new ArrayList<>();
+        List<Candidate> experienceCandidateList = new ArrayList<>();
         experienceCandidateList = readWriteCandidate.readExperienceCandidateList();
         for (int i = 0; i < experienceCandidateList.size(); i++) {
             System.out.println(experienceCandidateList.get(i));
@@ -70,7 +70,7 @@ public class CandidateManager implements ICandidateManager {
 
     @Override
     public void showInternCandidate() {
-        List<Candidate> internCandidateList =new ArrayList<>();
+        List<Candidate> internCandidateList = new ArrayList<>();
         internCandidateList = readWriteCandidate.readInternCandidateList();
         for (int i = 0; i < internCandidateList.size(); i++) {
             System.out.println(internCandidateList.get(i));
@@ -79,7 +79,7 @@ public class CandidateManager implements ICandidateManager {
 
     public void searchCandidate(String key, byte type) {
         candidateList = new ArrayList<>();
-        candidateList=showAll();
+        candidateList = showAll();
         for (int i = 0; i < candidateList.size(); i++) {
             if (this.candidateList.get(i).getFirstName().contains(key) || this.candidateList.get(i).getLastName().contains(key)) {
                 if (type == this.candidateList.get(i).getCandidateType()) {
