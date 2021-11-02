@@ -14,7 +14,7 @@ public class CandidateManager implements ICandidateManager {
     }
 
     public CandidateManager() {
-        candidateList = new ArrayList();
+        candidateList = showAll();
     }
 
     public void addExperienceCandidate(Candidate experienceCandidate) {
@@ -78,8 +78,7 @@ public class CandidateManager implements ICandidateManager {
     }
 
     public void searchCandidate(String key, byte type) {
-        candidateList = new ArrayList<>();
-        candidateList = showAll();
+
         for (int i = 0; i < candidateList.size(); i++) {
             if (this.candidateList.get(i).getFirstName().contains(key) || this.candidateList.get(i).getLastName().contains(key)) {
                 if (type == this.candidateList.get(i).getCandidateType()) {
