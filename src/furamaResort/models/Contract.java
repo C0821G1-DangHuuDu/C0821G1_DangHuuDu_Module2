@@ -58,4 +58,8 @@ public class Contract {
         this.customerID = customerID;
     }
 
+    @Override
+    public String toString() {
+        return numberOfContract +"," + bookingID + "," + prepaidAmount + "," + totalAmount + "," + customerID;
+    }
 }

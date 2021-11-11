@@ -2,6 +2,7 @@ package furamaResort.services.customer;
 
 import furamaResort.models.Customer;
 import furamaResort.models.Person;
+import furamaResort.utils.Validate;
 
 import java.util.List;
 import java.util.Scanner;
@@ -58,17 +59,17 @@ public class CustomerServiceImpl implements CustomerService{
         System.out.print("Enter Birthday of Customer: ");
         String birthDay = input.nextLine();
         System.out.print("Enter Gender of Customer: ");
-        String gender = input.nextLine();
+        String gender = Validate.checkGender(input.nextLine());
         System.out.print("Enter Identity Card of Customer: ");
         String identityCard = input.nextLine();
         System.out.print("Enter Phone of Customer: ");
-        String phoneNumber = input.nextLine();
+        String phoneNumber = Validate.checkPhone(input.nextLine());
         System.out.print("Enter Email of Customer: ");
         String email = input.nextLine();
         System.out.print("Enter Address of Customer: ");
         String address = input.nextLine();
         System.out.print("Enter Type of Customer: ");
-        String typeOfCustomer = input.nextLine();
+        String typeOfCustomer = Validate.checkTypeOfCustomer(input.nextLine());
 
         Customer customer = new Customer(id,name,birthDay,gender,identityCard,phoneNumber,email,typeOfCustomer,address);
         customerList.add(customer);

@@ -20,6 +20,7 @@ public class Booking {
         this.customerID = customerID;
         this.serviceName = serviceName;
         this.typeOfService = typeOfService;
+
     }
 
     public String getBookingID() {
@@ -68,5 +69,10 @@ public class Booking {
 
     public void setTypeOfService(String typeOfService) {
         this.typeOfService = typeOfService;
+    }
+
+    @Override
+    public String toString() {
+        return bookingID + "," + startDate +"," + endDate +",'" + customerID + "," + serviceName +"," + typeOfService;
     }
 }

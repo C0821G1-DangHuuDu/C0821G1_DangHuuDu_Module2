@@ -11,8 +11,13 @@ public class Example2 {
     }
 
     public static void main(String args[]) {
-        Example2 c1 = new Example2();
-        Example2 c2 = new Example2();
-        Example2 c3 = new Example2();
+        char[] array = new char[1];
+        System.out.println(array);
+        for (int i=0;i<array.length;i++){
+            System.out.println(array[i]);
+        }
+        for(int ar:array){
+            System.out.println(ar);
+        }
     }
 }

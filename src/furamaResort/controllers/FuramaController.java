@@ -131,13 +131,30 @@ public class FuramaController {
 
                     }while (choose>=1||choose<=4);
                 case 4:
-                    System.out.println("1.\tAdd new booking");
-                    System.out.println("2.\tDisplay list booking");
-                    System.out.println("3.\tCreate new contracts");
-                    System.out.println("4.\tDisplay list contracts");
-                    System.out.println("5.\tEdit contracts");
-                    System.out.println("6.\tReturn main menu");
-                    break;
+                    do {
+                        System.out.println("----------Booking Manager----------");
+                        System.out.println("1.\tAdd new booking");
+                        System.out.println("2.\tDisplay list booking");
+                        System.out.println("3.\tCreate new contracts");
+                        System.out.println("4.\tDisplay list contracts");
+                        System.out.println("5.\tEdit contracts");
+                        System.out.println("6.\tReturn main menu");
+
+                        System.out.print("Enter your choose with Booking: ");
+                        choose = Integer.parseInt(input.nextLine());
+
+                        switch (choose) {
+                            case 1:
+                            case 2:
+                            case 3:
+                            case 4:
+                            case 5:
+                            case 6:
+                                displayMainMenu();
+                        }
+
+
+                    }while (choose>=1||choose<=6);
                 case 5:
                     System.out.println("1.\tDisplay list customers use service");
                     System.out.println("2.\tDisplay list customers get voucher");

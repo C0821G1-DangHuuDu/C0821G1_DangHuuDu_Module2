@@ -24,7 +24,7 @@ public class Validate {
 
     public static double checkPoolArea(double poolArea) {
         if (poolArea <= 30) {
-            System.err.println("Not Right!Pool Area must be great than 30.\n");
+            System.out.println("Not Right!Pool Area must be great than 30.\n");
             System.out.print("Enter Pool Area again: ");
             poolArea = Double.parseDouble(input.nextLine());
             checkPoolArea(poolArea);
@@ -44,7 +44,7 @@ public class Validate {
 
     public static byte checkMaxOfPeople(byte maxOfPeople) {
         if (maxOfPeople < 0 || maxOfPeople > 20) {
-            System.err.println("Not Right!Max Of People must be great than 0 and less than 20.\n");
+            System.out.println("Not Right!Max Of People must be great than 0 and less than 20.");
             System.out.print("Enter Max Of People again: ");
             maxOfPeople = Byte.parseByte(input.nextLine());
             checkPoolArea(maxOfPeople);
@@ -54,7 +54,7 @@ public class Validate {
 
     public static int checkNumberOfFloor(int numberOfFloor) {
         if (numberOfFloor < 0) {
-            System.err.println("Not Right!Number Of Floor must be great than 0.\n");
+            System.out.println("Not Right!Number Of Floor must be great than 0.");
             System.out.print("Enter Number Of Floor again: ");
             numberOfFloor = Integer.parseInt(input.nextLine());
             checkPoolArea(numberOfFloor);
@@ -86,7 +86,57 @@ public class Validate {
         }
         return standardRoom;
     }
-    public static Date checkBirthDay(String birthDay){
+
+    public static String checkLevel(String level){
+        while(!(level.equals("Intermediate")||level.equals("College")||level.equals("University")||level.equals("Postgraduate"))){
+            System.out.print("Enter Level again (Intermediate/College/University/Postgraduate): ");
+            level = input.nextLine();
+            checkLevel(level);
+        }
+
+        return level;
+    }
+    public static String checkPosition(String position){
+        while(!(position.equals("Receptionist")||position.equals("Waiter")||position.equals("Expert")||position.equals("Supervise")||position.equals("Manager")||position.equals("Director"))){
+            System.out.print("Enter Level again (Receptionist/Waiter/Expert/Supervise/Manager/Director): ");
+            position = input.nextLine();
+            checkLevel(position);
+        }
+
+        return position;
+    }
+    public static String checkGender(String gender){
+        while(!(gender.equals("Male")||gender.equals("Female"))){
+            System.out.print("Enter Level again (Male/Female): ");
+            gender = input.nextLine();
+            checkLevel(gender);
+        }
+
+        return gender;
+    }
+
+    public static String checkPhone(String phone) {
+        try {
+            while (!Pattern.matches("^(0)[0-9]{9}$", phone)) {
+                System.out.println("Not Right!.");
+                System.out.print("Enter Phone again (10 number and 0xxxxxxxxx): ");
+                phone = input.nextLine();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return phone;
+    }
+    public static String checkTypeOfCustomer(String typeOfCustomer){
+        while(!(typeOfCustomer.equals("Diamond")||typeOfCustomer.equals("Platinium")||typeOfCustomer.equals("Gold")||typeOfCustomer.equals("Silver")||typeOfCustomer.equals("Member"))){
+            System.out.print("Enter Level again (Receptionist/Waiter/Expert/Supervise/Manager/Director): ");
+            typeOfCustomer = input.nextLine();
+            checkLevel(typeOfCustomer);
+        }
+
+        return typeOfCustomer;
+    }
+    public static Date checkDay(String birthDay){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date=new Date();
         try {
@@ -95,13 +145,15 @@ public class Validate {
             e.printStackTrace();
             System.out.print("Enter Type Of Rent again: ");
             birthDay = input.nextLine();
-            checkBirthDay(birthDay);
+            checkDay(birthDay);
         }
         return date;
     }
-
-
     public static void main(String[] args) {
-
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        System.out.print("Enter Type Of Rent again: ");
+       String birthDay = input.nextLine();
+      Date date = checkDay(birthDay);
+        System.out.println(dateFormat.format(date));
     }
 }

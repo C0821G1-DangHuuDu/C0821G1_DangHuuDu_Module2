@@ -2,6 +2,7 @@ package furamaResort.services.employee;
 
 import furamaResort.models.Employee;
 import furamaResort.models.Person;
+import furamaResort.utils.Validate;
 
 import java.util.List;
 import java.util.Scanner;
@@ -28,18 +29,18 @@ public class EmployeeServiceImpl implements EmployeeService{
         String name = input.nextLine();
         System.out.print("Enter Birthday of Employee need to Edit: ");
         String birthDay = input.nextLine();
-        System.out.print("Enter Gender of Employee need to Edit: ");
-        String gender = input.nextLine();
+        System.out.print("Enter Gender of Employee need to Edit (Male/Female): ");
+        String gender = Validate.checkGender(input.nextLine());
         System.out.print("Enter Identity Card of Employee need to Edit: ");
         String identityCard = input.nextLine();
-        System.out.print("Enter Phone of Employee need to Edit: ");
-        String phoneNumber = input.nextLine();
+        System.out.print("Enter Phone of Employee need to Edit (10 number and 0xxxxxxxxx): ");
+        String phoneNumber = Validate.checkPhone(input.nextLine());
         System.out.print("Enter Email of Employee need to Edit: ");
         String email = input.nextLine();
         System.out.print("Enter Level of Employee need to Edit: ");
-        String level = input.nextLine();
-        System.out.print("Enter Position of Employee need to Edit: ");
-        String position = input.nextLine();
+        String level = Validate.checkLevel(input.nextLine());
+        System.out.print("Enter Position of Employee need to Edit(Receptionist/Waiter/Expert/Supervise/Manager/Director): ");
+        String position = Validate.checkPosition(input.nextLine());
         System.out.print("Enter Salary of Employee need to Edit: ");
         double salary = Double.parseDouble(input.nextLine());
 
@@ -63,18 +64,18 @@ public class EmployeeServiceImpl implements EmployeeService{
         String name = input.nextLine();
         System.out.print("Enter Birthday of Employee: ");
         String birthDay = input.nextLine();
-        System.out.print("Enter Gender of Employee: ");
-        String gender = input.nextLine();
+        System.out.print("Enter Gender of Employee (Male/Female): ");
+        String gender = Validate.checkGender(input.nextLine());
         System.out.print("Enter Identity Card of Employee: ");
         String identityCard = input.nextLine();
-        System.out.print("Enter Phone of Employee: ");
-        String phoneNumber = input.nextLine();
+        System.out.print("Enter Phone of Employee (10 number and 0xxxxxxxxx): ");
+        String phoneNumber = Validate.checkPhone(input.nextLine());
         System.out.print("Enter Email of Employee: ");
         String email = input.nextLine();
-        System.out.print("Enter Level of Employee: ");
-        String level = input.nextLine();
-        System.out.print("Enter Position of Employee: ");
-        String position = input.nextLine();
+        System.out.print("Enter Level of Employee(Intermediate/College/University/Postgraduate): ");
+        String level = Validate.checkLevel(input.nextLine());
+        System.out.print("Enter Position of Employee(Receptionist/Waiter/Expert/Supervise/Manager/Director): ");
+        String position = Validate.checkPosition(input.nextLine());
         System.out.print("Enter Salary of Employee: ");
         double salary = Double.parseDouble(input.nextLine());
 
